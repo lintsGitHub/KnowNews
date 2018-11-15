@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		
+	</body>
+	<script src="js/mui.js"></script>
+	<script type="text/javascript">
+		mui.init();
+		window.addEventListener('newsId', function(event) {
+			//获得事件参数
+			var id = event.detail.id;
+			//根据id向服务器请求新闻详情
+			var url = "https://news-at.zhihu.com/api/4/news/"+id ;
+			mui.ajax(url,{
+				dataType: 'json',
+				type: 'get',
+				timeout: 10000,
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				success: function(data) {
+					window.location.href=data.share_url;
+				}
+			})
+		});
+	</script>
+</html>
