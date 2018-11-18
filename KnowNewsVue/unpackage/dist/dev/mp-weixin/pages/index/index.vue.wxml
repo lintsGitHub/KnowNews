@@ -1,0 +1,15 @@
+<template name="71fc829b">
+  <view class="_view data-v-444038be content">
+    <view class="_view data-v-444038be uni-list">
+      <view class="_view data-v-444038be uni-list-cell" hover-class="uni-list-cell-hover" wx:key="index" key="{{index}}" bindtap="handleProxy" data-newsid="{{item.id}}" data-eventid="{{'4i3-0-'+index}}" data-comkey="{{$k}}" wx:for="{{news}}" wx:for-index="index"
+        wx:for-item="item">
+        <view class="_view data-v-444038be uni-media-list">
+          <image class="_image data-v-444038be uni-media-list-logo" src="{{item.images}}"></image>
+          <view class="_view data-v-444038be uni-media-list-body">
+            <view class="_view data-v-444038be uni-media-list-text-top">{{item.title}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
